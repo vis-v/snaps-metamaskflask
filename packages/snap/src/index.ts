@@ -7,7 +7,7 @@ import { OnRpcRequestHandler } from '@metamask/snap-types';
  * @returns A message based on the origin.
  */
 export const getMessage = (originString: string): string =>
-  `Hello, ${originString}!`;
+  `Vanakkam, ${originString}!`;
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -29,9 +29,9 @@ export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
           {
             prompt: getMessage(origin),
             description:
-              'This custom confirmation is just for display purposes.',
+              'This edited custom confirmation is just for display purposes. done by vis-v.',
             textAreaContent:
-              'But you can edit the snap source code to make it do something, if you want to!',
+              'Hey I have edited this region! done by vis-v.',
           },
         ],
       });
